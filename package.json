@@ -6,13 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "type-check": "tsc",
+    "install-precommit": "husky install",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "next lint",
     "lint:prettier": "prettier --check .",
     "fmt": "run-s fmt:prettier fmt:eslint",
     "fmt:eslint": "npm run lint:eslint -- --fix",
     "fmt:prettier": "npm run lint:prettier -- --write",
-    "type-check": "tsc"
+    "precommit": "run-p -l --aggregate-output type-check lint:*"
   },
   "dependencies": {
     "next": "12.1.0",
