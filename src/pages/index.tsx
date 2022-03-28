@@ -1,11 +1,14 @@
-import type { NextPage } from "next";
+import { NextPage, GetServerSideProps } from "next";
 
-const Page: NextPage = () => {
-  return (
-    <div>
-      <h1>Hello world!</h1>
-    </div>
-  );
+const Index: NextPage = () => null;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      statusCode: 302,
+      destination: "./styled-component",
+    },
+  };
 };
 
-export default Page;
+export default Index;
