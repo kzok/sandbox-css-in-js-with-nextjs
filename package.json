@@ -12,8 +12,8 @@
     "lint:eslint": "next lint",
     "lint:prettier": "prettier --check .",
     "fmt": "run-s fmt:prettier fmt:eslint",
-    "fmt:eslint": "npm run lint:eslint -- --fix",
-    "fmt:prettier": "npm run lint:prettier -- --write",
+    "fmt:eslint": "next lint --fix",
+    "fmt:prettier": "prettier --write .",
     "precommit": "run-p -l --aggregate-output type-check lint:*"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.41",
+    "@types/styled-components": "^5.1.24",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
     "eslint": "8.11.0",
@@ -32,6 +33,7 @@
     "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.0",
+    "styled-components": "^5.3.5",
     "typescript": "4.6.2"
   },
   "volta": {
