@@ -12,8 +12,8 @@
     "lint:eslint": "next lint",
     "lint:prettier": "prettier --check .",
     "fmt": "run-s fmt:prettier fmt:eslint",
-    "fmt:eslint": "npm run lint:eslint -- --fix",
-    "fmt:prettier": "npm run lint:prettier -- --write",
+    "fmt:eslint": "next lint --fix",
+    "fmt:prettier": "prettier --write .",
     "precommit": "run-p -l --aggregate-output type-check lint:*"
   },
   "dependencies": {
