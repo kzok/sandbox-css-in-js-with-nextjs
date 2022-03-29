@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Page } from "../components/styled-component";
+import { Page } from "../../components/styled-component";
 
 const Index: NextPage = () => <Page />;
 

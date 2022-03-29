@@ -1,45 +1,43 @@
 import styled from "styled-components";
 
 const Child = styled.div`
+  background-color: #d88;
   padding: 16px;
 `;
 
-const Original = styled.div`
+const NestedChild = styled(Child)`
   background-color: #b44;
-  padding: 16px;
-
-  ${Child} {
-    background-color: #d88;
-    &::after {
-      content: "This is original style.";
-    }
-  }
 `;
 
-const Overwriting = styled(Original)`
+const Parent = styled.div`
   background-color: #4b4;
+  padding: 16px;
 
-  ${Child} {
+  div {
     background-color: #8d8;
-    &::after {
-      content: "This is overwrited style.";
-    }
   }
 `;
 
 /**
- * ネストしたスタイルがどのようになっているかの調査用
+ * 上書きしたスタイルの優先度の調査用
  */
-export const ExampleOverWriting: React.VFC = () => {
+export const ExampleOverwriting: React.VFC = () => {
   return (
     <div>
-      <h2>Overwriting</h2>
-      <Original>
-        <Child />
-      </Original>
-      <Overwriting>
-        <Child />
-      </Overwriting>
+      <h2>Nested selector priority</h2>
+      <Child>".childClass"</Child>
+      <br />
+      <b>".parentClass div" vs ".childClass"</b>
+      <Parent>
+        <Child>".parentClass div" の勝ち。</Child>
+      </Parent>
+      <br />
+      <b>styled コンポーネントにさらにスタイルを付けて詳細度が増えるかどうか</b>
+      <Parent>
+        <NestedChild>
+          詳細度は増えずに別のクラスが出来上がる。そのため ".parentClass div" の勝ち。
+        </NestedChild>
+      </Parent>
     </div>
   );
 };
