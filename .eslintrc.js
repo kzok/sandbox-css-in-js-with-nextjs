@@ -7,7 +7,10 @@ module.exports = {
   },
   extends: ["next/core-web-vitals", "eslint:recommended"],
   plugins: [],
-  rules: {},
+  rules: {
+    /** シンタックスrハイライトで打ち間違いかどうかわかるので不要 */
+    "react/no-unescaped-entities": "off",
+  },
   overrides: [
     // TypeScript 向けの設定
     {
