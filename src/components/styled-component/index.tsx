@@ -1,9 +1,11 @@
-import { ExampleOverWriting } from "./example-overwriting";
+import { ExampleNestedStyle } from "./example-nested-style";
+import { ExampleOverwriting } from "./example-overwriting";
 
 export const Page: React.VFC = () => {
   return (
     <div>
-      <ExampleOverWriting />
+      <ExampleNestedStyle />
+      <ExampleOverwriting />
     </div>
   );
 };
