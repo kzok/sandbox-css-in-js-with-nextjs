@@ -10,6 +10,8 @@ module.exports = {
   rules: {
     /** シンタックスrハイライトで打ち間違いかどうかわかるので不要 */
     "react/no-unescaped-entities": "off",
+    /** React.memo で叱られるの理不尽なので off */
+    "react/display-name": "off",
   },
   overrides: [
     // TypeScript 向けの設定
