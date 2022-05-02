@@ -10,6 +10,7 @@ const Original = styled.div`
 
   ${Child} {
     background-color: #d88;
+
     &::after {
       content: "This is original style.";
     }
@@ -21,6 +22,7 @@ const Overwriting = styled(Original)`
 
   ${Child} {
     background-color: #8d8;
+
     &::after {
       content: "This is overwrited style.";
     }
