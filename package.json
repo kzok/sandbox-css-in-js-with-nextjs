@@ -11,9 +11,11 @@
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "next lint",
     "lint:prettier": "prettier --check .",
-    "fmt": "run-s fmt:prettier fmt:eslint",
+    "lint:stylelint": "stylelint **/*.ts{,x}",
+    "fmt": "run-s fmt:prettier fmt:eslint fmt:stylelint",
     "fmt:eslint": "next lint --fix",
     "fmt:prettier": "prettier --write .",
+    "fmt:stylelint": "stylelint --fix **/*.ts{,x}",
     "precommit": "run-p -l --aggregate-output type-check lint:*"
   },
   "dependencies": {
