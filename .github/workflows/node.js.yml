@@ -21,7 +21,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: cache-home-dotnpm-${{ runner.os }}-${{ env.node-version }}
+          key: cache-home-dotnpm-${{ runner.os }}-${{ env.node-version }}-${{ hashFiles('package-lock.json') }}
       - name: "cache node_modules"
         uses: actions/cache@v2
         with:
