@@ -19,6 +19,8 @@ npm run dev
 - https://nextjs.org/docs
 
 - https://styled-components.com/docs
-- https://github.com/vercel/next.js/tree/canary/examples/with-styled-components
+- https://github.com/vercel/next.js/tree/v12.1.0/examples/with-styled-components
 
 - https://emotion.sh/docs/introduction
+- https://github.com/vercel/next.js/tree/v12.1.0/examples/with-emotion
+- https://github.com/vercel/next.js/tree/v12.1.0/examples/with-emotion-vanilla
