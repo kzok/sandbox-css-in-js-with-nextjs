@@ -6,7 +6,7 @@ name: Node.js CI
 on: [push]
 
 env:
-  cache-key-node-modules: node-modules-${{ github.sha }}-${{ github.run_id }}
+  cache-key-node-modules: node-modules-${{ github.run_number }}-${{ github.run_attempt }}
   node-version: "17.7.2"
 
 jobs:
